@@ -14,6 +14,6 @@ function createClient({ headers }) {
       });
     },
   });
-}
+} 
 
 export default withApollo(createClient);
