@@ -117,7 +117,7 @@ class CreateItem extends Component {
                   type="number"
                   id="price"
                   name="price"
-                  placeholder="Price"
+                  placeholder="€€€"
                   required
                   value={this.state.price}
                   onChange={this.handleChange}
