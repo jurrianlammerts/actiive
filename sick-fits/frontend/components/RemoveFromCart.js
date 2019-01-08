@@ -18,7 +18,7 @@ const BigButton = styled.button`
   background: none;
   border: none;
   &:hover {
-    color: ${props => props.theme.red};
+    color: ${props => props.theme.green};
     cursor: pointer;
   }
 `;

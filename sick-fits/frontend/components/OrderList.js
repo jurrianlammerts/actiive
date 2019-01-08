@@ -58,7 +58,7 @@ class OrderList extends Component {
                             {order.items.reduce((a, b) => a + b.quantity, 0)}{" "}
                             Items
                           </p>
-                          <p>{order.items.length}</p>
+                          <p>{order.items.length} Products</p>
                           <p>
                             {formatDistance(order.createdAt, new Date())} ago
                           </p>
