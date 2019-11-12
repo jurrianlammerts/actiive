@@ -44,7 +44,7 @@ class Order extends Component {
           return (
             <OrderStyles>
               <Head>
-                <title>Sick Fits - Order {order.id}</title>
+                <title>Actiive - Order {order.id}</title>
               </Head>
               <p>
                 <span>Order ID: </span>

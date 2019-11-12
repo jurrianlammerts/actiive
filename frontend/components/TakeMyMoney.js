@@ -57,7 +57,7 @@ class TakeMyMoney extends React.Component {
               {createOrder => (
                 <StripeCheckout
                   amount={calcTotalPrice(me.cart)}
-                  name="Sick Fits"
+                  name="Actiive"
                   description={`Order of ${totalItems(me.cart)} items!`}
                   image={
                     me.cart.length && me.cart[0].item && me.cart[0].item.image
