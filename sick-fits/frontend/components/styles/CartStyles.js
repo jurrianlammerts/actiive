@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const CartStyles = styled.div`
   padding: 20px;
@@ -10,6 +10,10 @@ const CartStyles = styled.div`
   right: 0;
   width: 40%;
   min-width: 500px;
+  @media (max-width: 500px) {
+    min-width: 0;
+    width: 100%;
+  }
   bottom: 0;
   transform: translateX(100%);
   transition: all 0.3s;

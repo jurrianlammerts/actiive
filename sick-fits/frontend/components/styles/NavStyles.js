@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const NavStyles = styled.ul`
   margin: 0;
@@ -8,6 +8,7 @@ const NavStyles = styled.ul`
   font-size: 2rem;
   a,
   button {
+    color: ${props => props.theme.black};
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
@@ -19,11 +20,11 @@ const NavStyles = styled.ul`
     border: 0;
     cursor: pointer;
     @media (max-width: 700px) {
-      font-size: 10px;
+      font-size: 12px;
       padding: 0 10px;
     }
     &:before {
-      content: '';
+      content: "";
       width: 2px;
       background: ${props => props.theme.lightgrey};
       height: 100%;
@@ -35,8 +36,8 @@ const NavStyles = styled.ul`
     }
     &:after {
       height: 2px;
-      background: #00A369;
-      content: '';
+      background: #00a369;
+      content: "";
       width: 0;
       position: absolute;
       transform: translateX(-50%);

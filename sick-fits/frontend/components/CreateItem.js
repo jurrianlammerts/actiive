@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Mutation } from "react-apollo";
-import gql from "graphql-tag";
-import Router from "next/router";
-import Form from "./styles/Form";
-import formatMoney from "../lib/formatMoney";
-import Error from "./ErrorMessage";
+import React, { Component } from 'react';
+import { Mutation } from 'react-apollo';
+import gql from 'graphql-tag';
+import Router from 'next/router';
+import Form from './styles/Form';
+import formatMoney from '../lib/formatMoney';
+import Error from './ErrorMessage';
 
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
@@ -28,32 +28,32 @@ const CREATE_ITEM_MUTATION = gql`
 
 class CreateItem extends Component {
   state = {
-    title: "Cool shoes",
-    description: "I love the shoes",
-    image: "",
-    largeImage: "",
+    title: 'Cool shoes',
+    description: 'I love the shoes',
+    image: '',
+    largeImage: '',
     price: 1000
   };
 
   handleChange = e => {
     const { name, type, value } = e.target;
-    const val = type === "number" ? parseFloat(value) : value;
+    const val = type === 'number' ? parseFloat(value) : value;
     this.setState({
       [name]: val
     });
   };
 
   uploadFile = async e => {
-    console.log("uploading file...");
+    console.log('uploading file...');
     const files = e.target.files;
     const data = new FormData();
-    data.append("file", files[0]);
-    data.append("upload_preset", "sickfits");
+    data.append('file', files[0]);
+    data.append('upload_preset', 'sickfits');
 
     const res = await fetch(
-      "https://api.cloudinary.com/v1_1/jurrian/image/upload/",
+      'https://api.cloudinary.com/v1_1/jurrian/image/upload/',
       {
-        method: "POST",
+        method: 'POST',
         body: data
       }
     );
@@ -78,7 +78,7 @@ class CreateItem extends Component {
               // Change them to the Single Item page
               console.log(res);
               Router.push({
-                pathname: "/item",
+                pathname: '/item',
                 query: { id: res.data.createItem.id }
               });
             }}

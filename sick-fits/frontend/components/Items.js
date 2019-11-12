@@ -25,10 +25,18 @@ const Center = styled.div`
 
 const ItemsList = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 60px;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
+  @media (min-width: 700px) and (max-width: 1099px) {
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 1100px) {
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 class Items extends Component {

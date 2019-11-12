@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Item = styled.div`
   background: white;
@@ -10,7 +10,7 @@ const Item = styled.div`
   img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
   }
   p {
     font-size: 12px;
@@ -29,6 +29,7 @@ const Item = styled.div`
     background: ${props => props.theme.lightgrey};
     & > * {
       background: white;
+      color: ${props => props.theme.black};
       border: 0;
       font-size: 1rem;
       padding: 1rem;
